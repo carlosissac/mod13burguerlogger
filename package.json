@@ -1,0 +1,28 @@
+{
+  "name": "mod13burguerlogger",
+  "version": "1.0.0",
+  "description": "mod13burguerlogger",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosissac/mod13burguerlogger.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlosissac/mod13burguerlogger/issues"
+  },
+  "homepage": "https://github.com/carlosissac/mod13burguerlogger#readme",
+  "dependencies": {
+    "eslint": "^7.8.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
