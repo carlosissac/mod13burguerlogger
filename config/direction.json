@@ -1,0 +1,8 @@
+{
+  "dev": {
+    "enabled": 0
+  },
+  "prod": {
+    "enabled": 1
+  }
+}
