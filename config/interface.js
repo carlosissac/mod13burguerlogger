@@ -11,11 +11,11 @@ var db = {};*/
 
 
 
-let sequelize = '';
+/*let sequelize = '';
 
 const dev = true;
 const prod = false;
-console.log(`${process.env.DATABASE},${process.env.USERNAME},${process.env.PASSWORD},${process.env.HOST}`);
+console.log(`${process.env.DATABASE},${process.env.USERNAME},${process.env.PASSWORD},${process.env.HOST}`);*/
 
 //DEV ENV ENABLED
 /*if(dev && !prod) {
