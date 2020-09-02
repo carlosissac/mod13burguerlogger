@@ -1,13 +1,12 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
-const path = require('path');
+//const exphbs = require('express-handlebars');
+//const path = require('path');
 const { Sequelize } = require('sequelize');
-require("dotenv").config();
+require('dotenv').config();
 const logger = require('./middleare/logger');
 
 
 const sequelize = new Sequelize(process.env.DATABASE, process.env.USERNAME, process.env.PASSWORD, {
-    port: 3306,
     host: process.env.HOST,
     dialect: 'mysql'
 });
