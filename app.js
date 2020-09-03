@@ -1,8 +1,7 @@
 const express = require('express');
 //const exphbs = require('express-handlebars');
 //const path = require('path');
-//require('dotenv').config();
-const logger = require('./middleare/logger');
+const logger = require('./middleware/logger');
 var db = require('./models');
 
 var app = express();
