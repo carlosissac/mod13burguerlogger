@@ -1,34 +1,25 @@
 const express = require('express');
 //const exphbs = require('express-handlebars');
 //const path = require('path');
-const { Sequelize } = require('sequelize');
-require('dotenv').config();
+//require('dotenv').config();
 const logger = require('./middleare/logger');
-
-
-const sequelize = new Sequelize(process.env.DATABASE, process.env.USERNAME, process.env.PASSWORD, {
-    host: process.env.HOST,
-    dialect: 'mysql'
-});
-
-
-general = async () => {
-    try {
-        await sequelize.authenticate();
-        console.log('Connection has been established successfully.');
-    } catch (error) {
-        console.error('Unable to connect to the database:', error);
-    }
-};
-
-general();
+var db = require('./models');
 
 var app = express();
+let PORT = process.env.PORT || 3000;
 
 app.use(logger);
 
 app.get('/', (req, res) => res.send('INDEX'));
 
-var PORT = process.env.PORT || 4000;
-
-app.listen(PORT, console.log(`Server started on port ${PORT}`));
+db
+    .sequelize.query('SET FOREIGN_KEY_CHECKS = 0', { raw: true })
+    .then(() => {
+        db
+            .sequelize.sync({ force: false })//false
+            .then(() => {
+                app.listen(PORT, () => {
+                    console.log(`App listening on: http://localhost:${PORT}`);
+                });
+            });
+    });
