@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        Description: {
+        BurguerDesc: {
             type: DataTypes.STRING(254),
             allowNull: false,
         },
@@ -15,19 +15,20 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: false
         },
-        Created: {
+        Create: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: sequelize.fn('now')
         },
-        Updated: {
+        Update: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: sequelize.fn('now')
         }
-
     }, {
-        timestamps: false
+        timestamps: true,
+        createdAt: 'Create',
+        updatedAt: 'Update'
     });
 
     return Burguer;

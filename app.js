@@ -2,14 +2,20 @@ const express = require('express');
 //const exphbs = require('express-handlebars');
 //const path = require('path');
 const logger = require('./middleware/logger');
-var db = require('./models');
+const burguer = require('./routes/api/burguer');
 
 var app = express();
+
 let PORT = process.env.PORT || 3000;
+
+var db = require('./models');
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(logger);
 
-app.get('/', (req, res) => res.send('INDEX'));
+app.use('/api/burguer', burguer);
 
 db
     .sequelize.query('SET FOREIGN_KEY_CHECKS = 0', { raw: true })
