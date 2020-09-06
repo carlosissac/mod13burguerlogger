@@ -1,0 +1,134 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.fas {
+    line-height: unset;
+}
+
+.nav {
+    position: fixed;
+}
+
+.body {
+    overflow: auto;
+}
+
+.nav-wrapper {
+    background-color:  #F19F4D;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+#nav-row {
+    font-size: x-large;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 35px;
+    width: 100%;
+    text-align: right;
+    padding-right: 8px;
+    max-width: none;
+    color: white;
+}
+
+#nav-brand-icon {
+    margin: 0px;
+    padding: 0px;
+    font-size: xx-large;
+    position: absolute;
+    right: 180px;
+}
+
+#nav-row-side {
+    font-size: x-large;
+}
+
+#nav-row-about {
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: large;
+    text-decoration: underline;
+}
+
+#w-card-title {
+    padding: 10px;
+    text-align: center;
+}
+
+#w-cardrow {
+    padding: 1rem;
+    margin: 0px;
+    border-top: 1px solid rgba(160,160,160,0.2);
+}
+
+#w-coll-wait,
+#w-coll-eat {
+    display: block;
+    height: 150px;
+    overflow: auto;
+}
+
+#icon-eat {
+    font-size: x-large;
+}
+
+#icon-eat,
+#w-coll-wait-item,
+#w-coll-eat-item {
+    color: black;
+}
+
+#w-wait,
+#w-eat,
+#w-card {
+    padding: 0px;
+    margin: 0px;
+}
+
+#w-btn-submit,
+#w-btn-clear {
+    width: 100%;
+}
+
+#w-btn-submit,
+#w-btn-clear {
+    padding: 0px;
+}
+
+#w-lbl-wait,
+#w-lbl-eat {
+    margin: 0px;
+}
+
+#body-area {
+    background: #D9D9D9;
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+    overflow: auto;
+    object-fit: cover;
+    overflow-y: scroll;
+}
+
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4484CE;
+    padding: 0px;
+    z-index: 5;
+}
+
+#main-footer {
+    width: 100%;
+    text-align: right;
+    padding-right: 8px;
+    max-width: none;
+    color: white;
+}

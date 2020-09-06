@@ -31,7 +31,6 @@ router.get('/eaten', (req, res) => {
     });
 });
 
-
 router.get('/:ID', (req, res) => {
     const { error } = Joi.validate(req.params, sch.getSingleBurguer());
     if(error) {
