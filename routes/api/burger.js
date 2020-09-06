@@ -1,18 +1,24 @@
 const Joi = require('joi');
-const { BurguerJoiSchema } = require('../../helper/joi/burguer');
+const { BurgerJoiSchema } = require('../../helper/joi/burger');
 const express = require('express');
 const router = new express.Router();
 const db = require('../../models');
-const sch = new BurguerJoiSchema();
+const sch = new BurgerJoiSchema();
 
 router.get('/', (req, res) => {
-    db.Burguer.findAll({raw: true}).then(ret => {
+    db.Burger.findAll({raw: true}).then(burger => {
+        res.render('burger', { burger: burger });
+    });
+});
+
+router.get('/all', (req, res) => {
+    db.Burger.findAll({raw: true}).then(ret => {
         res.json(ret);
     });
 });
 
 router.get('/waiting', (req, res) => {
-    db.Burguer.findAll({
+    db.Burger.findAll({
         raw: true,
         where: { Eaten: 0 },
         order: [['Create', 'ASC']]
@@ -22,7 +28,7 @@ router.get('/waiting', (req, res) => {
 });
 
 router.get('/eaten', (req, res) => {
-    db.Burguer.findAll({
+    db.Burger.findAll({
         raw: true,
         where: { Eaten: 1 },
         order: [['Update', 'DESC']]
@@ -32,22 +38,22 @@ router.get('/eaten', (req, res) => {
 });
 
 router.get('/:ID', (req, res) => {
-    const { error } = Joi.validate(req.params, sch.getSingleBurguer());
+    const { error } = Joi.validate(req.params, sch.getSingleBurger());
     if(error) {
-        res.status(400).send('BurguerID Invalid');
+        res.status(400).send('BurgerID Invalid');
         return;
     } else {
-        db.Burguer.findOne({
+        db.Burger.findOne({
             raw: true,
             where: { ID: req.params.ID }
         }).then(ret => {
             if(!ret) {
-                res.status(404).send('Burguer Not Found');
+                res.status(404).send('Burger Not Found');
                 return;
             } else {
                 const msg = {
                     'msg': 'ID Found',
-                    'Burguer': ret
+                    'Burger': ret
                 };
                 res.json(msg);
                 return;
@@ -57,20 +63,20 @@ router.get('/:ID', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    const { error } = Joi.validate(req.body, sch.postBurguer());
+    const { error } = Joi.validate(req.body, sch.postBurger());
     if(error) {
         res.status(400).send(error.details[0].message);
         return;
     } else {
-        db.Burguer.create({
+        db.Burger.create({
             raw: true,
-            BurguerDesc: req.body.BurguerDesc,
+            BurgerDesc: req.body.BurgerDesc,
             Eaten: req.body.Eaten
         }).then(ret => {
             const msg = {
                 'msg': 'Post Successful',
                 'ID': ret.dataValues.ID,
-                'BurguerDesc': ret.dataValues.BurguerDesc,
+                'BurgerDesc': ret.dataValues.BurgerDesc,
                 'Eaten': req.body.Eaten
             };
             res.json(msg);
@@ -80,12 +86,12 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:ID', (req, res) => {
-    const { error } = Joi.validate(req.params, sch.putBurguer());
+    const { error } = Joi.validate(req.params, sch.putBurger());
     if(error) {
-        res.status(400).send('BurguerID Invalid');
+        res.status(400).send('BurgerID Invalid');
         return;
     } else {
-        db.Burguer.update(
+        db.Burger.update(
             req.body, {
                 raw: true,
                 where: { ID: req.params.ID }
@@ -95,7 +101,7 @@ router.put('/:ID', (req, res) => {
                 return;
             } else {
                 const msg = {
-                    'msg': 'Burguer Update Successful',
+                    'msg': 'Burger Update Successful',
                     'ID': req.params.ID,
                     'body': req.body
                 };
@@ -107,18 +113,18 @@ router.put('/:ID', (req, res) => {
 });
 
 router.delete('/drop', (req, res) => {
-    db.Burguer.destroy({ truncate : true, cascade: false }).then(ret => {
+    db.Burger.destroy({ truncate : true, cascade: false }).then(ret => {
         res.json(`Cleared All Records ${ret}`);
     });
 });
 
 router.delete('/:ID', (req, res) => {
-    const { error } = Joi.validate(req.params, sch.deleteBurguer());
+    const { error } = Joi.validate(req.params, sch.deleteBurger());
     if(error) {
-        res.status(400).send('BurguerID Invalid');
+        res.status(400).send('BurgerID Invalid');
         return;
     } else {
-        db.Burguer.destroy({
+        db.Burger.destroy({
             where: { ID: req.params.ID }
         }).then(ret => {
             if(!Number(ret)) {

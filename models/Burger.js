@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
-    var Burguer = sequelize.define('Burguer', {
+    var Burger = sequelize.define('Burger', {
         ID: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
         },
-        BurguerDesc: {
+        BurgerDesc: {
             type: DataTypes.STRING(254),
             allowNull: false,
         },
@@ -31,5 +31,5 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: 'Update'
     });
 
-    return Burguer;
+    return Burger;
 };

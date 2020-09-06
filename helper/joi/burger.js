@@ -1,40 +1,40 @@
 const Joi = require('joi');
 
-const BurguerJoiSchema = function() {
-    this.ID = 'BurguerJoiSchema';
+const BurgerJoiSchema = function() {
+    this.ID = 'BurgerJoiSchema';
 };
 
-BurguerJoiSchema.prototype.getID = function() {
+BurgerJoiSchema.prototype.getID = function() {
     return this.type;
 };
 
-BurguerJoiSchema.prototype.getSingleBurguer = function() {
+BurgerJoiSchema.prototype.getSingleBurger = function() {
     const schema = {
         ID: Joi.string().trim().regex(/^[0-9]+$/).required()
     };
     return schema;
 };
 
-BurguerJoiSchema.prototype.postBurguer = function() {
+BurgerJoiSchema.prototype.postBurger = function() {
     const schema = {
-        BurguerDesc: Joi.string().required(),
+        BurgerDesc: Joi.string().required(),
         Eaten: Joi.string().required()
     };
     return schema;
 };
 
-BurguerJoiSchema.prototype.putBurguer = function() {
+BurgerJoiSchema.prototype.putBurger = function() {
     const schema = {
         ID: Joi.string().trim().regex(/^[0-9]+$/).required()
     };
     return schema;
 };
 
-BurguerJoiSchema.prototype.deleteBurguer = function() {
+BurgerJoiSchema.prototype.deleteBurger = function() {
     const schema = {
         ID: Joi.string().trim().regex(/^[0-9]+$/).required()
     };
     return schema;
 };
 
-module.exports = { BurguerJoiSchema };
+module.exports = { BurgerJoiSchema };

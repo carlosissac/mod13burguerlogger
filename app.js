@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const logger = require('./middleware/logger');
-const burguer = require('./routes/api/burguer');
+const burger = require('./routes/api/burger');
 
 var app = express();
 
@@ -15,12 +15,12 @@ app.use(express.json());
 
 app.use(logger);
 
-app.engine('handlebars',exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname,'public')));
 
-app.use('/api/burguer', burguer);
+app.use('/api/burger', burger);
 //app.use('/public/pages', pages);
 
 db
