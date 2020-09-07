@@ -78,6 +78,11 @@
     font-size: x-large;
 }
 
+#w-coll-eat,
+#w-coll-wait {
+    background-color: white;
+}
+
 #icon-eat,
 #w-coll-wait-item,
 #w-coll-eat-item {
