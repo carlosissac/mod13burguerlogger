@@ -1,7 +1,7 @@
 const express = require('express');
-const path = require('path');
+//const path = require('path');
 const app = express();
-const db = require('../../models');
+//const db = require('../../models');
 
 
 app.get('/', (req, res) => {
