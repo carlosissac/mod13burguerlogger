@@ -37,10 +37,10 @@
   },
   "nodemonConfig": {
     "events": {
-      "start": "kill-port 1000",
-      "restart": "kill-port 1000",
-      "crash": "kill-port 1000"
+      "start": "kill-port 3000",
+      "restart": "kill-port 3000",
+      "crash": "kill-port 3000"
     },
-    "delay": "1000"
+    "delay": "500"
   }
 }
