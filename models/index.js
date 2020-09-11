@@ -1,5 +1,3 @@
-'use strict';
-require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 const fs = require('fs');
