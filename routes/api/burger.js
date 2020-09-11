@@ -5,7 +5,6 @@ const router = new express.Router();
 const db = require('../../models');
 const sch = new BurgerJoiSchema();
 
-
 router.get('/', (req, res) => {
     db.Burger.findAll({raw: true}).then(ret => {
         res.json(ret);
