@@ -11,27 +11,27 @@
                     <img id="burguer-img" src="/assets/img/burger.jpg" width="200px" height="200px">
                 </div>
                 <div id="w-cardrow" style="border: 0px;" class="row">
-                    <div id="w-cardrow-cont" class="col s12 m4 l2">
-                        <a id="w-btn-submit" class="waves-effect waves-light orange darken-4 btn-large">Submit</a>
+                    <div id="w-cardrow-cont" class="col s12 m2 l2">
+                        <a type="submit" id="w-btn-submit" class="waves-effect waves-light orange darken-4 btn-large">Submit</a>
                     </div>
-                    <div id="w-cardrow-cont" class="col s12 m4 l10">
-                        <div class="input-field col s12">
+                    <div id="w-cardrow-cont" class="col s12 m10 l10">
+                        <div id="w-cardrow-cont-input" class="input-field col s12">
                             <input id="order" type="text" class="validate">
-                            <label for="order">Order</label>
+                            <label id="order-lbl" for="order">Order</label>
                         </div>
                     </div>
                 </div>
                 <div id="w-cardrow" class="row">
-                    <div id="w-cardrow-cont" class="col s12 m4 l6">
+                    <div id="w-cardrow-cont" class="col s12 m6 l6">
                         <h5 id="w-lbl-wait">Wait List</h5>
                         <ul id="w-coll-wait" class="collection">
                             {{#each array}}
                                 {{#totalcountwait}}{{/totalcountwait}}
                                 {{#if this.ID1}}
                                     <li id="w-coll-wait-item" class="collection-item">
-                                        <div>{{ID1}}
+                                        <div>{{{this.BurgerDesc1}}}
                                             <a href="#!" class="secondary-content">
-                                                <i id="icon-eat" class="fas fa-utensils"></i>
+                                                <i id="icon-eat" burgerid="{{{this.ID1}}}" class="fas fa-utensils"></i>
                                             </a>
                                         </div>
                                     </li>
@@ -45,13 +45,13 @@
                             {{/fullfalseywait}}                            
                         </ul>
                     </div>
-                    <div id="w-cardrow-cont" class="col s12 m4 l6">
+                    <div id="w-cardrow-cont" class="col s12 m6 l6">
                         <h5 id="w-lbl-eat">Eaten</h5>
                         <ul id="w-coll-eat" class="collection">
                             {{#each array}}
                                 {{#totalcounteaten}}{{/totalcounteaten}}
                                 {{#if this.ID2}}
-                                    <li id="w-coll-eat-item" class="collection-item">{{ID2}}</li>
+                                    <li id="w-coll-eat-item" class="collection-item">{{{this.BurgerDesc2}}}</li>
                                 {{/if}}
                                 {{#unless this.ID2}}
                                     {{#falsycounteaten}}{{/falsycounteaten}}
@@ -64,9 +64,9 @@
                     </div>
                 </div>
                 <div id="w-cardrow" style="text-align: right;" class="row">
-                    <div id="w-cardrow-cont" class="col s12 m4 l9"></div>
-                    <div id="w-cardrow-cont" class="col s12 m4 l3">
-                        <a id="w-btn-clear" class="waves-effect waves-light btn-large">Clear All</a>
+                    <div id="w-cardrow-cont" class="col s12 m9 l9"></div>
+                    <div id="w-cardrow-cont" class="col s12 m3 l3">
+                        <a id="w-btn-clear" class="waves-effect waves-light btn-large">Clear</a>
                     </div>
                 </div>
             </div>
@@ -75,3 +75,4 @@
     <div class="row"></div>
     <div class="row"></div>
 </div>
+

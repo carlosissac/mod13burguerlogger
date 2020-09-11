@@ -62,9 +62,18 @@
 }
 
 #w-cardrow {
-    padding: 1rem;
     margin: 0px;
     border-top: 1px solid rgba(160,160,160,0.2);
+}
+
+/*#w-cardrow-cont-input {*/
+    /*padding: 0px;*/
+    /*margin-bottom: 0px;*/
+    /*margin: 0px;*/
+/*}*/
+
+#w-cardrow-cont {
+    padding: 10px;
 }
 
 #w-coll-wait,

@@ -7,25 +7,21 @@ module.exports = {
 
     falsyresetwait: () => {
         this.falsywait = 0;
-        console.log(`FalsyWait ${this.falsywait}`);
         return;
     },
 
     totalresetwait: () => {
         this.totalwait = 0;
-        console.log(`TotalWait ${this.totalwait}`);
         return;
     },
 
     falsycountwait: () => {
         this.falsywait += 1;
-        console.log(`FalsyWait ${this.falsywait}`);
         return;
     },
 
     totalcountwait: () => {
         this.totalwait += 1;
-        console.log(`TotalWait ${this.totalwait}`);
         return;
     },
 
@@ -39,25 +35,21 @@ module.exports = {
 
     falsyreseteaten: () => {
         this.falsyeaten = 0;
-        //console.log(`FalsyEaten ${this.falsyeaten}`);
         return;
     },
 
     totalreseteaten: () => {
         this.totaleaten = 0;
-        //console.log(`TotalEaten ${this.totaleaten}`);
         return;
     },
 
     falsycounteaten: () => {
         this.falsyeaten += 1;
-        //console.log(`FalsyEaten ${this.falsyeaten}`);
         return;
     },
 
     totalcounteaten: () => {
         this.totaleaten += 1;
-        //console.log(`TotalEaten ${this.totaleaten}`);
         return;
     },
 
