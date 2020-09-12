@@ -66,12 +66,6 @@
     border-top: 1px solid rgba(160,160,160,0.2);
 }
 
-/*#w-cardrow-cont-input {*/
-    /*padding: 0px;*/
-    /*margin-bottom: 0px;*/
-    /*margin: 0px;*/
-/*}*/
-
 #w-cardrow-cont {
     padding: 10px;
 }
@@ -115,6 +109,7 @@
     padding: 0px;
 }
 
+#w-lbl-notfound,
 #w-lbl-wait,
 #w-lbl-eat {
     margin: 0px;
