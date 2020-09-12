@@ -28,10 +28,10 @@ app.use('/api/burger', apis);
 app.use(pages);
 
 db
-    .sequelize.query('SET FOREIGN_KEY_CHECKS = 0', { raw: true })
+    .sequelize.query('SET FOREIGN_KEY_CHECKS = 0', { raw: false })
     .then(() => {
         db
-            .sequelize.sync({ force: false })//false
+            .sequelize.sync({ force: true })//false
             .then(() => {
                 app.listen(PORT, () => {
                     console.log(`App listening on: http://localhost:${PORT}`);
