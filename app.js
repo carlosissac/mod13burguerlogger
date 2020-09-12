@@ -31,7 +31,7 @@ db
     .sequelize.query('SET FOREIGN_KEY_CHECKS = 0', { raw: false })
     .then(() => {
         db
-            .sequelize.sync({ force: true })//false
+            .sequelize.sync({ force: false })//false
             .then(() => {
                 app.listen(PORT, () => {
                     console.log(`App listening on: http://localhost:${PORT}`);
