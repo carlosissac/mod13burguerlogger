@@ -196,11 +196,11 @@ seed.sql ................................... Seed file with regards to be used a
 
 ![image](./public/assets/img/submitordersnaphot.jpg)
 
-4. The burger will be listed in the `Waitlist`. If you want to eat the burger click on the `fork and knife` logo.
+4. The burger will be listed in the `Wait List`(scrollable). If you want to eat the burger click on the `fork and knife` logo.
 
 ![image](./public/assets/img/waitlistsnapshot.jpg)
 
-5. After clicking the `fork-knife` logo the selected burger will be listed in the Eaten list.
+5. After clicking the `fork-knife` logo the selected burger will be listed in the `Eaten` list (scrollable).
 
 ![image](./public/assets/img/eatensnapshot.jpg)
 
