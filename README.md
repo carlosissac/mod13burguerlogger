@@ -4,9 +4,7 @@
 
 ## Description
 
-Burger logger is an application that is composed of MySQL, Node, Express, Handlebars and a custom ORM.
-
-Application follows an MVC design pattern along with Node, Express and MySQL to query and route data with Express-Handlebars to generate HTML.
+Build a Burger Logger application that follows an MVC design pattern along with Node, Express and MySQL to query and route data with Express-Handlebars to generate HTML.
 
 ## Snapshot
 
