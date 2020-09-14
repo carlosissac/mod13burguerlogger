@@ -10,7 +10,7 @@ Application follows an MVC design pattern along with Node, Express and MySQL to 
 
 ## Snapshot
 
-![image](./assets/mainsnapshot.jpg)
+![image](./public/assets/mainsnapshot.jpg)
 
 ## TableOfContents
 
@@ -35,33 +35,33 @@ Application follows an MVC design pattern along with Node, Express and MySQL to 
 
 ## UserStory
 
-* Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+1. Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
-* Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be eaten.
+2. Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be eaten.
 
-* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
+3. Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
-* Your app will store every burger in a database, whether devoured or not.
+4. Your app will store every burger in a database, whether devoured or not.
 
-* [App functionality is based on the one shown in this video](https://youtu.be/msvdn95x9OM).
+5. [App functionality is based on the one shown in this video](https://youtu.be/msvdn95x9OM).
 
 ## AcceptanceChecklist
 
 ### InitialRequirements
 
-* Attempt to complete homework assignment as described in instructions.
+1. Attempt to complete homework assignment as described in instructions.
 
 - Done. Issac.
 
-* If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
+2. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
 
 - All functionality specified was implemented. Done. Issac.
 
-* Hosting on Heroku and adding a README.md are required for this homework.
+3. Hosting on Heroku and adding a README.md are required for this homework.
 
 - Done. Issac.
 
-* In addition, add this homework to your portfolio, more information can be found below.
+4. In addition, add this homework to your portfolio, more information can be found below.
 
 - Done. Issac.
 
@@ -188,34 +188,34 @@ seed.sql ................................... Seed file with regards to be used a
 
 1. When you access the URL you should see the main page being displayed.
 
-![image](./assets/mainsnapshot.jpg)
+![image](./public/assets/mainsnapshot.jpg)
 
 2. In case you navigate to a invalid page, the following will be displayed.
 
-![image](./assets/notfoundsnapshot.jpg)
+![image](./public/assets/notfoundsnapshot.jpg)
 
 3. If you want to submit an order type the burger you want to eat click the `Submit` button.
 
-![image](./assets/submitordersnaphot.jpg)
+![image](./public/assets/submitordersnaphot.jpg)
 
 4. The burger will be listed in the `Waitlist`. If you want to eat the burger click on the `fork and knife` logo.
 
-![image](./assets/waitlistsnapshot.jpg)
+![image](./public/assets/waitlistsnapshot.jpg)
 
 5. After clicking the `fork-knife` logo the selected burger will be listed in the Eaten list.
 
-![image](./assets/eatensnapshot.jpg)
+![image](./public/assets/eatensnapshot.jpg)
 
 6. Click on the `Clear` button in order to clear all data from the lists.
 
-![image](./assets/clearbuttonsnapshot.jpg)
+![image](./public/assets/clearbuttonsnapshot.jpg)
 
 ## URLS
 
 The following links provide video walkthrough of the app usage.
 
-* [Live App Heroku Link](https://mod13burguerlogger.herokuapp.com/)
+1. [Live App Heroku Link](https://mod13burguerlogger.herokuapp.com/)
 
-* [Github Repo Link](https://github.com/carlosissac/mod13burguerlogger)
+2. [Github Repo Link](https://github.com/carlosissac/mod13burguerlogger)
 
-* [Portfolio Link](https://carlosissac.github.io/mod08hwprofessionalmaterials/)
+3. [Portfolio Link](https://carlosissac.github.io/mod08hwprofessionalmaterials/)
