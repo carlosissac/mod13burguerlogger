@@ -10,7 +10,7 @@ Application follows an MVC design pattern along with Node, Express and MySQL to 
 
 ## Snapshot
 
-![image](./public/assets/mainsnapshot.jpg)
+![image](./public/assets/img/mainsnapshot.jpg)
 
 ## TableOfContents
 
@@ -188,27 +188,27 @@ seed.sql ................................... Seed file with regards to be used a
 
 1. When you access the URL you should see the main page being displayed.
 
-![image](./public/assets/mainsnapshot.jpg)
+![image](./public/assets/img/mainsnapshot.jpg)
 
 2. In case you navigate to a invalid page, the following will be displayed.
 
-![image](./public/assets/notfoundsnapshot.jpg)
+![image](./public/assets/img/notfoundsnapshot.jpg)
 
 3. If you want to submit an order type the burger you want to eat click the `Submit` button.
 
-![image](./public/assets/submitordersnaphot.jpg)
+![image](./public/assets/img/submitordersnaphot.jpg)
 
 4. The burger will be listed in the `Waitlist`. If you want to eat the burger click on the `fork and knife` logo.
 
-![image](./public/assets/waitlistsnapshot.jpg)
+![image](./public/assets/img/waitlistsnapshot.jpg)
 
 5. After clicking the `fork-knife` logo the selected burger will be listed in the Eaten list.
 
-![image](./public/assets/eatensnapshot.jpg)
+![image](./public/assets/img/eatensnapshot.jpg)
 
 6. Click on the `Clear` button in order to clear all data from the lists.
 
-![image](./public/assets/clearbuttonsnapshot.jpg)
+![image](./public/assets/img/clearbuttonsnapshot.jpg)
 
 ## URLS
 
