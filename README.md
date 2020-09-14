@@ -4,7 +4,7 @@
 
 ## Description
 
-Build a Burger Logger application that follows an MVC design pattern along with Node, Express and MySQL to query and route data with Express-Handlebars to generate HTML.
+Build a Burger Logger application that follows an MVC design pattern along with Node, Express and MySQL to query and route data with Express-Handlebars in order to generate UI HTML.
 
 ## Snapshot
 
